@@ -1,0 +1,135 @@
+{
+  "method": "Node + jsdom + Three.js real; canvas 2D e renderer simulados; sem verificação visual/GPU",
+  "version": 2,
+  "geometry": {
+    "samples": 3507,
+    "failures": []
+  },
+  "meshes": 3250,
+  "routes": {
+    "destinations": 124,
+    "missing": []
+  },
+  "interiors": {
+    "count": 109,
+    "points": 1115
+  },
+  "vehicles": {
+    "car": {
+      "movedMeters": 5.75,
+      "brakes": true,
+      "exit": true
+    },
+    "bike": {
+      "movedMeters": 4.11,
+      "brakes": true,
+      "exit": true
+    },
+    "shuttle": {
+      "movedMeters": 3.08,
+      "brakes": true,
+      "exit": true
+    }
+  },
+  "autopilot": {
+    "stops": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distance": 909.3
+  },
+  "ui": {
+    "reader": true,
+    "search": true,
+    "preferences": true,
+    "remappedKeys": true,
+    "thematicTours": 3,
+    "energySimulation": true,
+    "modalFocus": true,
+    "textWithoutWebGL": true,
+    "qualityProfiles": 5,
+    "automaticDownshift": true
+  },
+  "environmentDetails": {
+    "buildingsWithExtraDetail": 14,
+    "birds": 12,
+    "traffic": 5
+  },
+  "metropolis": {
+    "districts": 8,
+    "farming": true
+  },
+  "expansion": {
+    "districtRoads": {
+      "samples": 5736,
+      "failures": []
+    },
+    "interactions": {
+      "elevator": true,
+      "light": true,
+      "doorCollider": true
+    },
+    "transit": {
+      "bus": {
+        "arrival": true,
+        "seconds": 30.1
+      },
+      "metro": {
+        "arrival": true,
+        "seconds": 15.2
+      },
+      "train": {
+        "arrival": true,
+        "seconds": 19.1
+      },
+      "cable": {
+        "arrival": true,
+        "seconds": 27.5
+      },
+      "taxi": {
+        "arrival": true,
+        "seconds": 14.4
+      },
+      "boat": {
+        "arrival": true,
+        "seconds": 28.4
+      },
+      "cargo": {
+        "arrival": true,
+        "seconds": 16.6
+      }
+    },
+    "population": {
+      "citizens": 144,
+      "routines": true,
+      "dialogue": true,
+      "weatherReaction": true
+    },
+    "ecosystem": {
+      "species": 11,
+      "observation": true,
+      "visibleCropGrowth": true
+    },
+    "events": {
+      "participation": true,
+      "saved": true
+    },
+    "weather": {
+      "modes": 5,
+      "particles": 1400
+    },
+    "atlas": {
+      "filters": true,
+      "zoom": true,
+      "cleanup": true
+    },
+    "space": {
+      "launch": true,
+      "orbitalInterior": true,
+      "return": true
+    },
+    "frameIntegration": true
+  }
+}

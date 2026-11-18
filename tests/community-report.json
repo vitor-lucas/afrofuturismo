@@ -1,0 +1,11 @@
+{
+  "gardenCreation": true,
+  "gardenReplacementNoDuplicate": true,
+  "invalidGardenRejected": true,
+  "persistentGarden": true,
+  "customRoutes": true,
+  "noDuplicateTours": true,
+  "routeEditor": true,
+  "vehiclePaint": true,
+  "previousDrawerRestored": true
+}

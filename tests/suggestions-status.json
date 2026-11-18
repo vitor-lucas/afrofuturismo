@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "suggestion": "Rotinas com horários individuais, em vez de um horário único para todos.",
+    "status": "Parcial",
+    "evidence": "Horários diferenciados por identidade; rotina completa ainda requer teste integrado."
+  },
+  {
+    "id": 2,
+    "suggestion": "Entrada e saída dos personagens pelos edifícios onde trabalham.",
+    "status": "Parcial",
+    "evidence": "Ocupação de prédios e presença em interiores adicionadas; transição e separação local testadas, fluxo completo pendente."
+  },
+  {
+    "id": 3,
+    "suggestion": "Trabalho animado específico para agricultores, médicos, artistas e comerciantes.",
+    "status": "Parcial",
+    "evidence": "Movimento de trabalho genérico existente; animações próprias por profissão pendentes."
+  },
+  {
+    "id": 4,
+    "suggestion": "Grupos de conversa que se formam e se desfazem nas praças.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 5,
+    "suggestion": "Personagens aguardando o transporte nas estações.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 6,
+    "suggestion": "Desvio entre pedestres sem sobreposição dos corpos.",
+    "status": "Parcial",
+    "evidence": "Separação local de pedestres testada; multidões e gargalos ainda precisam de validação."
+  },
+  {
+    "id": 7,
+    "suggestion": "Reação às travessias e aos semáforos.",
+    "status": "Parcial",
+    "evidence": "Solicitação de travessia e veículos controláveis; tráfego completo pendente."
+  },
+  {
+    "id": 8,
+    "suggestion": "Diálogos que lembram encontros anteriores com o jogador.",
+    "status": "Parcial",
+    "evidence": "Diálogos contam encontros anteriores no armazenamento local; conversa narrativa ainda simples."
+  },
+  {
+    "id": 9,
+    "suggestion": "Personagens com relações de vizinhança e histórias pessoais.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 10,
+    "suggestion": "Rotas de abrigo que terminam em locais cobertos.",
+    "status": "Parcial",
+    "evidence": "Tempestade direciona à moradia; cobertura física e rotas completas pendentes."
+  },
+  {
+    "id": 11,
+    "suggestion": "Projeto arquitetônico exclusivo para cada edifício principal.",
+    "status": "Parcial",
+    "evidence": "Identidades e variações por endereço; não são 224 projetos arquitetônicos exclusivos."
+  },
+  {
+    "id": 12,
+    "suggestion": "Plantas internas desenhadas junto com as fachadas.",
+    "status": "Parcial",
+    "evidence": "Dados de pavimentos compartilhados e 12 plantas por programa; revisão integral das fachadas pendente."
+  },
+  {
+    "id": 13,
+    "suggestion": "Pátios internos com ventilação e iluminação natural.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 14,
+    "suggestion": "Varandas com uso real pelos moradores.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 15,
+    "suggestion": "Oficinas e comércios no térreo dos edifícios.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 16,
+    "suggestion": "Murais com autoria, licença e contexto cultural.",
+    "status": "Dependência externa",
+    "evidence": "Exige obras com autoria e licença documentadas; não foram encomendadas obras."
+  },
+  {
+    "id": 17,
+    "suggestion": "Monumentos desenvolvidos com artistas negros.",
+    "status": "Dependência externa",
+    "evidence": "Exige participação de artistas negros; não se deve inventar essa colaboração."
+  },
+  {
+    "id": 18,
+    "suggestion": "Painéis que expliquem diferenças entre referências culturais.",
+    "status": "Parcial",
+    "evidence": "Contextos e fontes por distrito e explicação das geometrias autorais; curadoria especializada pendente."
+  },
+  {
+    "id": 19,
+    "suggestion": "Edifícios comunitários com espaços de decisão e encontro.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 20,
+    "suggestion": "Rotas de visita sobre arquitetura negra brasileira.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 21,
+    "suggestion": "Texturas fotográficas licenciadas com cor, normal e rugosidade.",
+    "status": "Parcial",
+    "evidence": "Texturas procedurais com relevo; materiais fotográficos licenciados ainda pendentes."
+  },
+  {
+    "id": 22,
+    "suggestion": "Iluminação HDRI compatível com a posição do sol.",
+    "status": "Parcial",
+    "evidence": "Ambiente procedural com sol, sem HDRI fotográfico."
+  },
+  {
+    "id": 23,
+    "suggestion": "Sombras de contato nos pés, móveis e veículos.",
+    "status": "Parcial",
+    "evidence": "Sombras existentes, sem passe de oclusão de contato."
+  },
+  {
+    "id": 24,
+    "suggestion": "Reflexos locais para vitrines e corpos d’água.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 25,
+    "suggestion": "Controle da intensidade emissiva das placas e telas.",
+    "status": "Parcial",
+    "evidence": "Materiais emissivos e controles existentes; inspeção visual pendente."
+  },
+  {
+    "id": 26,
+    "suggestion": "Vidros com transparência e espessura coerentes.",
+    "status": "Parcial",
+    "evidence": "Materiais físicos existentes; espessura e transparência realista pendentes."
+  },
+  {
+    "id": 27,
+    "suggestion": "Iluminação interna com temperatura de cor por ambiente.",
+    "status": "Parcial",
+    "evidence": "Luzes internas por ambiente; avaliação visual pendente."
+  },
+  {
+    "id": 28,
+    "suggestion": "Variação sutil de desgaste e umidade nas fachadas.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 29,
+    "suggestion": "Transição suave de exposição entre interiores e exteriores.",
+    "status": "Parcial",
+    "evidence": "Transições existentes; exposição entre ambientes requer revisão."
+  },
+  {
+    "id": 30,
+    "suggestion": "Inspeção visual comparativa em dia, noite, chuva e neblina.",
+    "status": "Dependência externa",
+    "evidence": "Prévia gráfica exigida pelo ambiente não disponível (cua_repl.js ausente)."
+  },
+  {
+    "id": 31,
+    "suggestion": "Suspensão visual nos veículos e inclinação nas curvas.",
+    "status": "Parcial",
+    "evidence": "Inclinação visual nas curvas e ao frear; não há suspensão física completa."
+  },
+  {
+    "id": 32,
+    "suggestion": "Direção baseada na distância entre os eixos.",
+    "status": "Implementado/testado",
+    "evidence": "Direção baseada em distância entre eixos e ângulo; teste de influência da distância entre eixos e ausência de giro parado."
+  },
+  {
+    "id": 33,
+    "suggestion": "Distância de frenagem proporcional à velocidade e aderência.",
+    "status": "Implementado/testado",
+    "evidence": "Frenagem com desaceleração finita e aderência menor no molhado; teste de distância/velocidade residual."
+  },
+  {
+    "id": 34,
+    "suggestion": "Bicicletas com pedais e corrente animados.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 35,
+    "suggestion": "Sinalização de conversão e luzes de freio.",
+    "status": "Parcial",
+    "evidence": "Lanternas modeladas; sinais funcionais ainda pendentes."
+  },
+  {
+    "id": 36,
+    "suggestion": "Tráfego que respeite integralmente semáforos e pedestres.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 37,
+    "suggestion": "Rotas públicas com pontos de transferência.",
+    "status": "Parcial",
+    "evidence": "Sete modalidades conectam distritos; transferências físicas ainda simplificadas."
+  },
+  {
+    "id": 38,
+    "suggestion": "Mapas de linhas com tempos previstos de viagem.",
+    "status": "Parcial",
+    "evidence": "Tempos e destinos na interface; mapa completo de linhas pendente."
+  },
+  {
+    "id": 39,
+    "suggestion": "Estacionamento e devolução dos veículos compartilhados.",
+    "status": "Parcial",
+    "evidence": "Devolução por desembarque implementada; estacionamentos completos pendentes."
+  },
+  {
+    "id": 40,
+    "suggestion": "Rampas, escadas e elevadores com transições físicas consistentes.",
+    "status": "Parcial",
+    "evidence": "Elevadores testados por tipo; revisão de escadas/rampas em toda a cidade pendente."
+  },
+  {
+    "id": 41,
+    "suggestion": "Substituição dos animais restantes por modelos anatômicos animados.",
+    "status": "Parcial",
+    "evidence": "Quatro modelos importados; demais espécies procedurais."
+  },
+  {
+    "id": 42,
+    "suggestion": "Habitat específico para cada espécie.",
+    "status": "Parcial",
+    "evidence": "Áreas identificadas; habitats coerentes por espécie ainda precisam de revisão."
+  },
+  {
+    "id": 43,
+    "suggestion": "Ciclos de alimentação, descanso e exploração.",
+    "status": "Parcial",
+    "evidence": "Estados básicos de exploração e descanso; ciclos próprios de cada espécie pendentes."
+  },
+  {
+    "id": 44,
+    "suggestion": "Interação educativa sem alimentação inadequada dos animais.",
+    "status": "Parcial",
+    "evidence": "Observação educativa sem oferta de alimento; revisão de conteúdo pendente."
+  },
+  {
+    "id": 45,
+    "suggestion": "Áreas de observação com distância respeitosa.",
+    "status": "Parcial",
+    "evidence": "Áreas e placas de observação; revisão de distâncias por espécie pendente."
+  },
+  {
+    "id": 46,
+    "suggestion": "Vegetação local com informações botânicas verificadas.",
+    "status": "Dependência externa",
+    "evidence": "Exige identificação botânica e revisão das fontes por espécie."
+  },
+  {
+    "id": 47,
+    "suggestion": "Crescimento agrícola por espécie e estação.",
+    "status": "Parcial",
+    "evidence": "Cultivo com crescimento acelerado; ciclos/estação por espécie pendentes."
+  },
+  {
+    "id": 48,
+    "suggestion": "Água com margens, drenagem e correnteza coerentes.",
+    "status": "Parcial",
+    "evidence": "Água e canais representados; hidrologia completa pendente."
+  },
+  {
+    "id": 49,
+    "suggestion": "Corredores verdes ligando parques e reservas.",
+    "status": "Parcial",
+    "evidence": "Áreas verdes e árvores existentes; continuidade ecológica pendente."
+  },
+  {
+    "id": 50,
+    "suggestion": "Registro de biodiversidade com fotografias e fontes.",
+    "status": "Parcial",
+    "evidence": "Registro de observação; fotografias e fontes biológicas pendentes."
+  },
+  {
+    "id": 51,
+    "suggestion": "Paisagens sonoras gravadas e licenciadas.",
+    "status": "Dependência externa",
+    "evidence": "Exige gravações com licença e créditos; os sons atuais são sintetizados."
+  },
+  {
+    "id": 52,
+    "suggestion": "Áudio espacial com posição e distância.",
+    "status": "Parcial",
+    "evidence": "Sons dependem da região; posicionamento acústico espacial real pendente."
+  },
+  {
+    "id": 53,
+    "suggestion": "Atenuação do som ao entrar em edifícios.",
+    "status": "Parcial",
+    "evidence": "Volume atenuado em interiores; audição no navegador ainda não testada."
+  },
+  {
+    "id": 54,
+    "suggestion": "Sons de passos diferentes para terra, madeira e pedra.",
+    "status": "Parcial",
+    "evidence": "Tons de passos distintos em madeira; gravações e classificação completa dos pisos pendentes."
+  },
+  {
+    "id": 55,
+    "suggestion": "Avisos de estação com legendas.",
+    "status": "Parcial",
+    "evidence": "Aviso sintetizado demonstrável; legendas e anúncios reais pendentes."
+  },
+  {
+    "id": 56,
+    "suggestion": "Trilha original produzida por artistas negros.",
+    "status": "Dependência externa",
+    "evidence": "Exige composição/produção e autorização de artistas; colaboração não realizada."
+  },
+  {
+    "id": 57,
+    "suggestion": "Controle separado de música, ambiente, efeitos e narração.",
+    "status": "Parcial",
+    "evidence": "Camadas e volumes existentes; música original pendente."
+  },
+  {
+    "id": 58,
+    "suggestion": "Histórias curtas contadas pelos habitantes.",
+    "status": "Parcial",
+    "evidence": "Diálogos e identidade fictícia; narrativas extensas pendentes."
+  },
+  {
+    "id": 59,
+    "suggestion": "Narrativa sobre a criação de cada distrito.",
+    "status": "Parcial",
+    "evidence": "Contextos por distrito; narrativa completa pendente."
+  },
+  {
+    "id": 60,
+    "suggestion": "Missões cujas decisões alterem espaços comunitários.",
+    "status": "Parcial",
+    "evidence": "Entregas e atividades existentes; efeitos persistentes na cidade pendentes."
+  },
+  {
+    "id": 61,
+    "suggestion": "Teste completo da tela inicial com teclado e leitor de tela.",
+    "status": "Parcial",
+    "evidence": "Ações da tela inicial testadas em DOM; leitor de tela real pendente."
+  },
+  {
+    "id": 62,
+    "suggestion": "Gaveta de navegação com busca e histórico.",
+    "status": "Parcial",
+    "evidence": "Visual anterior restaurado por solicitação. Busca continua no painel de navegação; histórico permanece no diário."
+  },
+  {
+    "id": 63,
+    "suggestion": "Controles ajustáveis para uso com uma mão.",
+    "status": "Implementado/testado",
+    "evidence": "Escolha do lado do joystick; estado aplicado e salvo, testado em DOM. Uso em aparelho físico pendente."
+  },
+  {
+    "id": 64,
+    "suggestion": "Redimensionamento independente dos controles de toque.",
+    "status": "Implementado/testado",
+    "evidence": "Escala de controles de toque de 75% a 140%, aplicada e persistida; testada em DOM."
+  },
+  {
+    "id": 65,
+    "suggestion": "Modo de alto contraste auditado em todos os painéis.",
+    "status": "Parcial",
+    "evidence": "Modo contraste existente; auditoria visual integral pendente."
+  },
+  {
+    "id": 66,
+    "suggestion": "Opção de desativar balanço de câmera e flashes.",
+    "status": "Parcial",
+    "evidence": "Redução de movimento existente; inspeção de todos os efeitos pendente."
+  },
+  {
+    "id": 67,
+    "suggestion": "Legendas para toda informação transmitida por som.",
+    "status": "Parcial",
+    "evidence": "Texto educativo disponível; cobertura de todos os avisos sonoros pendente."
+  },
+  {
+    "id": 68,
+    "suggestion": "Foco visível e retorno de foco em todos os diálogos.",
+    "status": "Parcial",
+    "evidence": "Foco e trap de modal existentes; auditoria de todos os diálogos pendente."
+  },
+  {
+    "id": 69,
+    "suggestion": "Tutorial de dois minutos adaptado ao dispositivo.",
+    "status": "Implementado/testado",
+    "evidence": "Tutorial de cinco passos, adaptado ao dispositivo; ações testadas em DOM."
+  },
+  {
+    "id": 70,
+    "suggestion": "Modo de leitura que funcione sem WebGL.",
+    "status": "Parcial",
+    "evidence": "Leitura sem WebGL implementada; teste de navegador sem GPU pendente."
+  },
+  {
+    "id": 71,
+    "suggestion": "Legenda com símbolos consistentes para serviços.",
+    "status": "Parcial",
+    "evidence": "Legenda e marcadores básicos; todos os serviços ainda não categorizados."
+  },
+  {
+    "id": 72,
+    "suggestion": "Rotas que distingam caminhada, bicicleta e transporte.",
+    "status": "Parcial",
+    "evidence": "Rotas a pé e viagens separadas; comparação multimodal pendente."
+  },
+  {
+    "id": 73,
+    "suggestion": "Indicação do andar atual nos mapas internos.",
+    "status": "Parcial",
+    "evidence": "Pavimento do minimapa interno existente; conferência em todos os modelos pendente."
+  },
+  {
+    "id": 74,
+    "suggestion": "Favoritos organizados por categoria.",
+    "status": "Parcial",
+    "evidence": "Favoritos locais sem categorização."
+  },
+  {
+    "id": 75,
+    "suggestion": "Pontos de encontro compartilháveis por link.",
+    "status": "Parcial",
+    "evidence": "Links de locais existentes; coordenadas de encontro ainda não implementadas."
+  },
+  {
+    "id": 76,
+    "suggestion": "Filtros de locais acessíveis e abertos.",
+    "status": "Pendente",
+    "evidence": "Sem implementação e evidência suficientes para declarar conclusão."
+  },
+  {
+    "id": 77,
+    "suggestion": "Busca com tolerância a acentos e pequenos erros.",
+    "status": "Implementado/testado",
+    "evidence": "Busca normaliza acentos e aceita um erro de edição em palavras; testes positivos e negativos."
+  },
+  {
+    "id": 78,
+    "suggestion": "Estimativas de distância e tempo com unidade clara.",
+    "status": "Parcial",
+    "evidence": "Distância e previsão de viagem existentes; padronização integral pendente."
+  },
+  {
+    "id": 79,
+    "suggestion": "Minimapa com escala adaptada ao modo de deslocamento.",
+    "status": "Parcial",
+    "evidence": "Minimapa básico; escala adaptativa por modo pendente."
+  },
+  {
+    "id": 80,
+    "suggestion": "Referências visuais de bairros para reduzir dependência do mapa.",
+    "status": "Parcial",
+    "evidence": "Nomes e cores de bairros existentes; teste de orientação visual pendente."
+  },
+  {
+    "id": 81,
+    "suggestion": "Missões de três a oito minutos com conclusão clara.",
+    "status": "Parcial",
+    "evidence": "Circuito e entrega existentes; aferição de duração pendente."
+  },
+  {
+    "id": 82,
+    "suggestion": "Projetos comunitários com transformações visíveis.",
+    "status": "Parcial",
+    "evidence": "Jardins comunitários mudam visualmente o cenário e persistem; campanha de obras públicas ainda pendente."
+  },
+  {
+    "id": 83,
+    "suggestion": "Exposições temporárias com imagens reais e créditos.",
+    "status": "Parcial",
+    "evidence": "Fotografias reais de três placas do Benin; exposições temporárias pendentes."
+  },
+  {
+    "id": 84,
+    "suggestion": "Álbum de descobertas culturais com fontes.",
+    "status": "Parcial",
+    "evidence": "Diário e descobertas existentes; álbum visual pendente."
+  },
+  {
+    "id": 85,
+    "suggestion": "Desafios cooperativos para atividades escolares.",
+    "status": "Parcial",
+    "evidence": "Roteiro exportável com papéis para atividade cooperativa presencial; não há multiplayer em rede."
+  },
+  {
+    "id": 86,
+    "suggestion": "Criação de roteiros pelo professor.",
+    "status": "Implementado/testado",
+    "evidence": "Editor salva roteiro com três paradas, instala o percurso sem duplicação e exporta atividade de turma; testes DOM."
+  },
+  {
+    "id": 87,
+    "suggestion": "Jardins e exposições personalizados pelo visitante.",
+    "status": "Parcial",
+    "evidence": "Jardins de flores, horta demonstrativa e bosque editáveis e salvos localmente; curadoria de exposições ainda pendente."
+  },
+  {
+    "id": 88,
+    "suggestion": "Recompensas cosméticas sem compras obrigatórias.",
+    "status": "Parcial",
+    "evidence": "Pintura gratuita de veículos implementada e testada; vínculo com recompensas cosméticas por missão pendente."
+  },
+  {
+    "id": 89,
+    "suggestion": "Perguntas de reflexão ligadas aos lugares explorados.",
+    "status": "Parcial",
+    "evidence": "Perguntas educativas existentes; revisão contextual pendente."
+  },
+  {
+    "id": 90,
+    "suggestion": "Registro de progresso sem pressão por visitas diárias.",
+    "status": "Parcial",
+    "evidence": "Conquistas sem prazo obrigatório existentes; teste de uso pendente."
+  },
+  {
+    "id": 91,
+    "suggestion": "Testes visuais em larguras de 320 a 1920 pixels.",
+    "status": "Dependência externa",
+    "evidence": "Ferramenta de prévia do ambiente ausente; suíte visual não executada."
+  },
+  {
+    "id": 92,
+    "suggestion": "Testes multitoque em Android e iOS reais.",
+    "status": "Dependência externa",
+    "evidence": "Não há aparelhos Android/iOS físicos conectados para testes reais."
+  },
+  {
+    "id": 93,
+    "suggestion": "Orçamento de polígonos, texturas e desenhos por quadro.",
+    "status": "Parcial",
+    "evidence": "Perfis e limites de resolução existentes; orçamento e medições de GPU pendentes."
+  },
+  {
+    "id": 94,
+    "suggestion": "Carregamento sob demanda por distrito.",
+    "status": "Parcial",
+    "evidence": "Interiores sob demanda; distritos externos ainda montados antecipadamente."
+  },
+  {
+    "id": 95,
+    "suggestion": "Níveis de detalhe para personagens, árvores e edifícios.",
+    "status": "Parcial",
+    "evidence": "Ocultação por distância; LOD de geometria completo pendente."
+  },
+  {
+    "id": 96,
+    "suggestion": "Testes de colisão e acessibilidade em todas as entradas.",
+    "status": "Parcial",
+    "evidence": "Índice espacial e tipos de interiores testados; todas as entradas ainda não auditadas."
+  },
+  {
+    "id": 97,
+    "suggestion": "Testes de restauração de progresso com arquivos inválidos.",
+    "status": "Implementado/testado",
+    "evidence": "Validação de cópias, rejeição de cinco formatos inválidos e restauração atômica com rollback testado."
+  },
+  {
+    "id": 98,
+    "suggestion": "Relatório de erros acessível dentro do jogo.",
+    "status": "Implementado/testado",
+    "evidence": "Relatório local exportável com erros e configuração; implementação existente, exportação requer teste no navegador."
+  },
+  {
+    "id": 99,
+    "suggestion": "Revisão de autoria, licenças e bibliografia.",
+    "status": "Parcial",
+    "evidence": "Fontes, créditos e imagens identificados; licenças de modelos e revisão integral pendentes."
+  },
+  {
+    "id": 100,
+    "suggestion": "Checklist de publicação com testes e limitações documentadas.",
+    "status": "Parcial",
+    "evidence": "Testes e limites documentados; checklist integral depende das verificações pendentes."
+  }
+]

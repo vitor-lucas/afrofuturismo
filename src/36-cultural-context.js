@@ -1,0 +1,20 @@
+/* Referências identificadas: relações educativas, sem atribuição de símbolos inventados. */
+const CULTURAL_CONTEXT=[
+ {title:'Arquitetura de terra do Mali',text:'As cidades antigas de Djenné são referência para estudar construção em terra e conservação comunitária. Os edifícios desta cidade são projetos ficcionais, sem reproduzir monumentos de Djenné.',source:'https://whc.unesco.org/en/list/116/'},
+ {title:'Patrimônio afro-brasileiro',text:'A roda de capoeira articula música, movimento e transmissão de saberes. Ela é um patrimônio vivo, não um padrão decorativo.',source:'https://ich.unesco.org/en/RL/capoeira-circle-00892'},
+ {title:'Reino do Benin e artistas Edo',text:'As placas históricas expostas no museu são obras de artistas da guilda de fundidores de latão. O Reino do Benin corresponde ao atual sul da Nigéria e não deve ser confundido com a República do Benin.',source:'https://www.metmuseum.org/art/collection/search/310752'},
+ {title:'Paisagens culturais e conservação',text:'Paisagens culturais preservam relações entre pessoas, história e território. A reserva da cidade é ficcional e reúne referências de lugares distintos.',source:'https://whc.unesco.org/en/culturallandscape/'},
+ {title:'Francis Kéré e construção comunitária',text:'Francis Kéré, nascido em Burkina Faso, reúne participação comunitária, materiais locais e conforto ambiental em sua arquitetura. A referência é educativa e não implica autoria dos edifícios desta simulação.',source:'https://www.pritzkerprize.com/laureates/diebedo-francis-kere'},
+ {title:'Cultura afro-diaspórica',text:'Arte, música, literatura e memória afro-diaspóricas têm trajetórias distintas. O museu e o centro cultural oferecem pontos de partida para aprofundar suas fontes.',source:'https://nmaahc.si.edu/'},
+ {title:'Tecnologia a serviço da comunidade',text:'A oficina circular é uma proposta ficcional de trabalho, reparo e compartilhamento. Sua estética original não reproduz um objeto ritual nem representa uma tradição africana única.',source:'https://www.pritzkerprize.com/laureates/diebedo-francis-kere'},
+ {title:'Saberes, território e alimentação',text:'A agricultura da cidade é uma simulação. Conhecer os saberes das comunidades quilombolas exige ouvir suas próprias organizações e reconhecer sua diversidade e seus direitos.',source:'https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/quilombolas'}
+];
+function decorateDistinctBuilding(c,p){const v=(p.i*17+p.district*7)%5;p.designVariant=v;p.designSignature=p.key+':'+p.type+':'+v;const rhythm=3+(p.i%6);for(let i=0;i<rhythm;i++){const x=-4.8+i*9.6/Math.max(1,rhythm-1);c.box(['madeira','cobre','terra','ocre','rebocoT'][v],.07,1.8,.12,x,Math.max(3.8,p.H-3),7.32);}const marker=(p.i%9+1)*.08;c.box('cobre',1+marker,.06,.15,-3.5,1.1,7.35);const m=['madeira','cobre','terra','ocre','rebocoT'][v];
+ if(['culture','university'].includes(p.type)){for(const side of [-1,1])for(let k=0;k<3;k++)c.cyl(m,.1,.16,3.1,side*(2.4+k*1.2),0,8.3,12);c.box('madeira',12,.18,2.4,0,3.15,8);}
+ else if(p.type==='greenhouse'){for(let k=-4;k<=4;k+=2)c.box('aco',.07,2.6,.07,k,p.H+.3,0);c.box('vidroT',9,.08,6,0,p.H+2.9,0);}
+ else if(p.type==='factory'){for(const side of [-1,1])c.cyl('aco',.4,.4,2.2,side*4,p.H+.4,-3,16);}
+ else{for(let k=0;k<3+v;k++)c.box(m,.1,2.5,.22,-4.7+k*(9.4/(2+v)),.3,7.35);}
+ if(p.type==='home'){c.cone('telhaM',1,1.8,0,p.H+.45,0,4,PI/4,9.2,10.6);}else if(p.type==='culture'){c.geoM('cobre',new T.TorusGeometry(3,.14,10,48,PI),0,p.H+1,0,0,0,0);for(const side of [-1,1])c.cyl('madeiraE',.14,.22,4,side*5,0,8,12);}else if(p.type==='university'){c.box('madeira',14,.16,3,0,3.5,8.2);for(let i=-5;i<=5;i++)c.box('madeiraE',.1,.12,3, i,3.7,8.2);}
+ c.box(m,12,.12,.25,0,3.3,7.3);p.context=CULTURAL_CONTEXT[p.district];
+}
+function openCulturalContext(p){const c=p.context||CULTURAL_CONTEXT[p.district||0];openModal(`<h2>${esc(c.title)}</h2><p>${esc(c.text)}</p><p><a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer">Consultar a fonte</a></p><p>Design deste edifício: criação procedural original, variante ${p.designVariant+1||1}. A referência contextual não transforma este projeto em réplica histórica.</p>`);}

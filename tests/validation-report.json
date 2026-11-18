@@ -1,0 +1,234 @@
+{
+  "geometry": {
+    "samples": 2967,
+    "failures": []
+  },
+  "reachability": {
+    "visitedCells": 66571,
+    "destinations": 28,
+    "unreachable": [],
+    "entrances": [
+      {
+        "i": 3,
+        "target": "door",
+        "instance": 3
+      },
+      {
+        "i": 4,
+        "target": "door",
+        "instance": 4
+      },
+      {
+        "i": 5,
+        "target": "door",
+        "instance": 5
+      },
+      {
+        "i": 6,
+        "target": "door",
+        "instance": 6
+      },
+      {
+        "i": 7,
+        "target": "door",
+        "instance": 7
+      },
+      {
+        "i": 8,
+        "target": "door",
+        "instance": 8
+      },
+      {
+        "i": 9,
+        "target": "door",
+        "instance": 9
+      },
+      {
+        "i": 10,
+        "target": "door",
+        "instance": 10
+      },
+      {
+        "i": 11,
+        "target": "door",
+        "instance": 11
+      },
+      {
+        "i": 12,
+        "target": "door",
+        "instance": 12
+      },
+      {
+        "i": 13,
+        "target": "door",
+        "instance": 13
+      },
+      {
+        "i": 14,
+        "target": "door",
+        "instance": 14
+      },
+      {
+        "i": 15,
+        "target": "door",
+        "instance": 15
+      },
+      {
+        "i": 16,
+        "target": "door",
+        "instance": 16
+      },
+      {
+        "i": 17,
+        "target": "door",
+        "instance": 17
+      },
+      {
+        "i": 18,
+        "target": "door",
+        "instance": 18
+      },
+      {
+        "i": 19,
+        "target": "door",
+        "instance": 19
+      },
+      {
+        "i": 20,
+        "target": "door",
+        "instance": 20
+      },
+      {
+        "i": 21,
+        "target": "door",
+        "instance": 21
+      },
+      {
+        "i": 22,
+        "target": "door",
+        "instance": 22
+      },
+      {
+        "i": 23,
+        "target": "door",
+        "instance": 23
+      },
+      {
+        "i": 24,
+        "target": "door",
+        "instance": 24
+      },
+      {
+        "i": 25,
+        "target": "door",
+        "instance": 25
+      }
+    ]
+  },
+  "map": {
+    "houses": 14,
+    "labels": 30,
+    "failures": []
+  },
+  "zoom": {
+    "before": 230,
+    "first": 222.95668064780153,
+    "final": 203.9933583836988,
+    "expected": 203.99170044494622
+  },
+  "shadowUpdates": 13,
+  "interiors": [
+    {
+      "id": "museu",
+      "points": 39
+    },
+    {
+      "id": "cultural",
+      "points": 4
+    },
+    {
+      "id": "inovacao",
+      "points": 9
+    },
+    {
+      "id": "escola",
+      "points": 11
+    },
+    {
+      "id": "mercado",
+      "points": 9
+    },
+    {
+      "id": "saude",
+      "points": 6
+    },
+    {
+      "id": "biblioteca",
+      "points": 8
+    },
+    {
+      "id": "conselho",
+      "points": 6
+    },
+    {
+      "id": "sustent",
+      "points": 11
+    },
+    {
+      "id": "casaPatio",
+      "points": 7
+    },
+    {
+      "id": "sobrado",
+      "points": 7
+    },
+    {
+      "id": "vizinhanca",
+      "points": 7
+    }
+  ],
+  "mobile": {
+    "quality": "low",
+    "touch": true,
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "boxes": {
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "joy": {
+        "x": 22,
+        "y": 640,
+        "w": 118,
+        "h": 118
+      },
+      "ebtn": {
+        "x": 300,
+        "y": 540,
+        "w": 64,
+        "h": 64
+      },
+      "mini": {
+        "x": 242,
+        "y": 695,
+        "w": 132,
+        "h": 135
+      },
+      "tools": {
+        "x": 16,
+        "y": 69,
+        "w": 358,
+        "h": 44
+      }
+    }
+  },
+  "landscape": {
+    "height": 390,
+    "viewport": 390
+  },
+  "pageErrors": []
+}

@@ -1,0 +1,65 @@
+{
+  "types": [
+    {
+      "type": "home",
+      "rooms": 6,
+      "colliders": 55
+    },
+    {
+      "type": "office",
+      "rooms": 4,
+      "colliders": 47
+    },
+    {
+      "type": "lab",
+      "rooms": 4,
+      "colliders": 47
+    },
+    {
+      "type": "university",
+      "rooms": 6,
+      "colliders": 51
+    },
+    {
+      "type": "clinic",
+      "rooms": 6,
+      "colliders": 59
+    },
+    {
+      "type": "restaurant",
+      "rooms": 2,
+      "colliders": 49
+    },
+    {
+      "type": "shop",
+      "rooms": 2,
+      "colliders": 49
+    },
+    {
+      "type": "culture",
+      "rooms": 4,
+      "colliders": 45
+    },
+    {
+      "type": "factory",
+      "rooms": 4,
+      "colliders": 43
+    },
+    {
+      "type": "greenhouse",
+      "rooms": 2,
+      "colliders": 117
+    },
+    {
+      "type": "station",
+      "rooms": 4,
+      "colliders": 49
+    },
+    {
+      "type": "spaceport",
+      "rooms": 4,
+      "colliders": 47
+    }
+  ],
+  "collisionIndex": true
+}

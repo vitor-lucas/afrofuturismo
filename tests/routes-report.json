@@ -1,0 +1,9 @@
+{
+  "method": "Node + jsdom + Three.js real; canvas 2D e renderer simulados; sem verificação visual/GPU",
+  "version": 2,
+  "routes": {
+    "asynchronous": true,
+    "cancelled": true,
+    "points": 219
+  }
+}

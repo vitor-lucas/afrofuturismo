@@ -1,0 +1,19 @@
+{
+  "method": "Node + jsdom + Three.js real; canvas 2D e renderer simulados; sem verificação visual/GPU",
+  "version": 2,
+  "geometry": {
+    "samples": 4587,
+    "failures": []
+  },
+  "expansion": {
+    "districtRoads": {
+      "samples": 18000,
+      "failures": []
+    },
+    "services": {
+      "repairChecklist": true,
+      "waterRefill": true,
+      "points": 32
+    }
+  }
+}

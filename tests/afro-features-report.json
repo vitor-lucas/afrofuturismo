@@ -1,0 +1,11 @@
+{
+  "citizenOccupancy": true,
+  "pedestrianSeparation": true,
+  "vehicleDynamics": true,
+  "previousMenuRestored": true,
+  "accentAndTypoSearch": true,
+  "touchHandAndScale": true,
+  "validRestore": true,
+  "invalidCopiesRejected": 5,
+  "rollbackOnQuotaError": true
+}
