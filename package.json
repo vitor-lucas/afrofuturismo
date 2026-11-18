@@ -7,7 +7,9 @@
     "build": "node build.js",
     "test": "node tests/unit.js",
     "test:browser": "node tests/browser.js",
-    "pages": "node scripts/prepare-pages.js"
+    "pages": "node scripts/prepare-pages.js",
+    "test:presenter": "node tests/presenter.js",
+    "presenter:token": "node scripts/presenter-token.js"
   },
   "engines": {
     "node": ">=18"

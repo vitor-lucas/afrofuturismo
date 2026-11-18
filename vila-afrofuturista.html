@@ -1294,6 +1294,54 @@
 
 
  @media(max-width:480px){#start .btns{grid-template-columns:1fr}#start .in{padding-bottom:30px}#start h1{font-size:42px}}
+/* Apresentação: palco livre, leitura contrastada e controles por toque. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.presenter-start-link{margin:16px 0 0!important;font-size:13px!important}
+.presenter-start-link .btn{font-size:13px!important;min-height:44px!important}
+.presenter-access{max-width:620px;margin:0 auto}
+.presenter-eyebrow{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--gold);padding-right:32px}
+.presenter-access h2{margin-top:12px}
+.presenter-access-features{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.presenter-access-features span{padding:7px 12px;border:1px solid var(--line);border-radius:24px;font-size:12px}
+.presenter-access label{display:block;font-weight:700;margin-bottom:8px}
+.presenter-token-row{display:flex;align-items:stretch;gap:8px}
+.presenter-token-row input{width:100%;min-width:0;margin:0;font-family:monospace}
+.presenter-token-row .btn{flex:0 0 auto;min-height:44px}
+#presenter-login-status{min-height:24px;font-size:13px;color:var(--ink2)}
+.presenter-access-help{font-size:12px!important;color:var(--ink2);margin:20px 0 0}
+#presenter-stage{position:absolute;inset:0;z-index:70;pointer-events:none;color:#f8f3e6}
+#presenter-stage button,#presenter-stage select{font:inherit;min-height:44px}
+#presenter-stage .btn{color:#f8f3e6;background:#23483e;border-color:#537266;white-space:normal}
+#presenter-stage .btn.primary{color:#172e26;background:#e7bf71;border-color:#e7bf71}
+#presenter-stage .btn:focus-visible,#presenter-stage select:focus-visible{outline:3px solid #f5cf85;outline-offset:3px}
+.presenter-topbar{position:absolute;inset:max(12px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) auto max(14px,env(safe-area-inset-left));display:flex;align-items:center;gap:12px;pointer-events:auto;padding:8px 12px;border:1px solid #8ca69855;border-radius:16px;background:#102c25f5;box-shadow:0 8px 28px #0003}
+.presenter-badge{font-size:11px;font-weight:800;letter-spacing:.1em;color:#e7bf71;margin-right:auto}
+.presenter-clock{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.presenter-clock time{font-variant-numeric:tabular-nums;font-family:monospace;font-size:17px}
+.presenter-deck{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));left:max(14px,env(safe-area-inset-left));width:min(560px,calc(100% - 28px));max-height:calc(100dvh - 108px);overflow-y:auto;overscroll-behavior:contain;pointer-events:auto;padding:22px 24px 16px;background:#102c25f5;border:1px solid #8ca69877;border-top:3px solid #e7bf71;border-radius:18px;box-shadow:0 16px 48px #0005;text-align:start;overflow-wrap:anywhere}
+.presenter-deck-meta{display:flex;align-items:center;gap:10px;justify-content:space-between;font-size:11px;letter-spacing:.04em;color:#d9c79e}
+.presenter-deck-meta .btn{font-size:11px!important;padding:6px 10px;flex:0 0 auto}
+#presenter-title{font-family:var(--f-head);font-size:clamp(22px,3vw,32px);line-height:1.2;margin:14px 0;text-wrap:balance;outline:none}
+.presenter-description{font-size:15px;line-height:1.65;margin:0 0 16px;max-width:65ch}
+.presenter-actions{display:flex;flex-wrap:wrap;gap:8px}
+.presenter-actions .btn{font-size:12px!important;padding:8px 12px}
+.presenter-note{border-left:3px solid #e7bf71;padding:10px 14px;background:#ffffff09;font-size:13px;line-height:1.6;margin:14px 0}
+.presenter-navigation{display:flex;gap:8px;align-items:center;margin:18px 0 12px}
+.presenter-navigation>.btn{flex:0 0 auto;padding:10px 12px;font-size:13px!important}
+.presenter-step-picker{flex:1;min-width:0}
+.presenter-step-picker select{display:block;width:100%;border:1px solid #537266;background:#183b30;color:#f8f3e6;border-radius:10px;padding:8px;font-size:12px!important;text-overflow:ellipsis;cursor:pointer}
+.presenter-progress{height:4px;border-radius:4px;overflow:hidden;background:#ffffff20}
+.presenter-progress span{display:block;height:100%;background:#e7bf71}
+.presenter-shortcuts{display:block;font-size:10px;line-height:1.6;color:#c5d3ca;margin-top:9px}
+html[data-presenting="true"] #hud,html[data-presenting="true"] #start,html[data-presenting="true"] #tour,html[data-presenting="true"] #labels,html[data-presenting="true"] #drawer-trigger,html[data-presenting="true"] #textvisit,html[data-presenting="true"] #world-button,html[data-presenting="true"] #camera-button,html[data-presenting="true"] #routehud,html[data-presenting="true"] #themehud,html[data-presenting="true"] #ridehud,html[data-presenting="true"] #err{display:none!important}
+html[data-presenting="true"] #modal{z-index:100}
+html[data-presenting="true"] #touch{z-index:72}
+html[data-presenting="true"] #joy{bottom:max(22px,env(safe-area-inset-bottom))}
+html[data-presenting="true"] #touch:not(.hidden)~#presenter-stage .presenter-deck{bottom:max(152px,calc(env(safe-area-inset-bottom) + 140px));max-height:calc(100dvh - 240px)}
+@media(max-width:600px){.presenter-topbar{gap:6px;padding:6px 8px;flex-wrap:wrap}.presenter-badge{font-size:9px;letter-spacing:.05em;flex-basis:100%}.presenter-clock{gap:6px;margin-right:auto}.presenter-clock time{font-size:14px}.presenter-topbar .btn{font-size:11px!important;padding:6px 8px}.presenter-deck{padding:14px 16px 12px;max-height:calc(100dvh - 104px)}.presenter-description{font-size:13px;line-height:1.6}.presenter-navigation{gap:6px}.presenter-navigation>.btn{font-size:11px!important;padding:8px;min-width:44px}.presenter-navigation #presenter-prev span{display:none}.presenter-shortcuts{display:none}#presenter-title{font-size:24px}.presenter-token-row{gap:6px}}
+@media(max-width:359px){.presenter-badge{width:100%;margin-bottom:2px}.presenter-clock{margin-right:auto}.presenter-deck{max-height:calc(100dvh - 128px)}}
+@media(max-height:500px) and (orientation:landscape){.presenter-topbar{padding:4px 8px}.presenter-badge{display:none}.presenter-deck{width:min(480px,70%);padding:10px 16px;max-height:calc(100dvh - 88px)}.presenter-description{font-size:12px}#presenter-title{font-size:20px;margin:8px 0}.presenter-navigation{margin:8px 0}.presenter-shortcuts{display:none}}
+@media(prefers-reduced-motion:reduce){#presenter-stage *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 <div id="app">
   <canvas id="c" tabindex="0" aria-label="Cena 3D da Vila Afrofuturista"></canvas>
@@ -4973,6 +5021,13 @@
 
 </script>
 <script>
+/* >>> 09-presenter-config.js */
+// Bloqueio local de controles; o site e este hash são públicos.
+const PRESENTER_ACCESS = Object.freeze({
+  "tokenHash": "ef2a82c2295f5d4c1a6e7d148138919e0beedf85d880d0e7a3e80d8558c7381e",
+  "sessionMs": 7200000
+});
+
 /* >>> 10-core.js */
 /* ============================================================
    NÚCLEO — utilidades, texturas procedurais, materiais PBR,
@@ -8467,9 +8522,9 @@ function openConcept() {
 }
 function openMenu() {
   const inside = !!G.in;
-  openModal(`<h2>Menu</h2><div class="grid" style="margin-top:12px">${[['Continuar', 'play', 'm_go'], inside ? ['Sair do edifício', 'exit', 'm_exit'] : (G.mode === 'fp' ? ['Visão urbana', 'home', 'm_orb'] : ['Caminhar pela vila', 'walk', 'm_walk']), ['Mapa', 'map', 'm_map'], ['Glossário', 'book', 'm_glos'], ['Visita guiada', 'tour', 'm_tour'], ['Conceito', 'info', 'm_con'], ['Ajuda e controles', 'help', 'm_help'], ['Configurações', 'menu', 'm_set'], ['Fontes e créditos', 'book', 'm_src'], ['Metrópole e distritos','map','m_metro'], ['Vida comunitária','info','m_life'], ['Transportes limpos','play','m_vehicle'], ['Percursos por tema','tour','m_themes'], ['Visita em texto e busca','book','m_reader'], ['Conforto e acessibilidade','eye','m_access'], ['Laboratório sustentável','sun','m_innov'], ['Retomar caminhada','walk','m_resume']].map(([l, i, id]) => `<button class="btn" id="${id}" style="justify-content:flex-start;border-radius:14px">${IC[i]}${l}</button>`).join('')}</div><p style="margin-top:14px;font-size:13px;color:var(--ink2)">${visitProgress().content} conteúdos lidos, ${visitProgress().places} locais e ${visitProgress().interiors} interiores visitados. O progresso fica salvo neste navegador.</p>`);
+  openModal(`<h2>Menu</h2><div class="grid" style="margin-top:12px">${[['Continuar', 'play', 'm_go'], ['Modo apresentador', 'tour', 'm_presenter'], inside ? ['Sair do edifício', 'exit', 'm_exit'] : (G.mode === 'fp' ? ['Visão urbana', 'home', 'm_orb'] : ['Caminhar pela vila', 'walk', 'm_walk']), ['Mapa', 'map', 'm_map'], ['Glossário', 'book', 'm_glos'], ['Visita guiada', 'tour', 'm_tour'], ['Conceito', 'info', 'm_con'], ['Ajuda e controles', 'help', 'm_help'], ['Configurações', 'menu', 'm_set'], ['Fontes e créditos', 'book', 'm_src'], ['Metrópole e distritos','map','m_metro'], ['Vida comunitária','info','m_life'], ['Transportes limpos','play','m_vehicle'], ['Percursos por tema','tour','m_themes'], ['Visita em texto e busca','book','m_reader'], ['Conforto e acessibilidade','eye','m_access'], ['Laboratório sustentável','sun','m_innov'], ['Retomar caminhada','walk','m_resume']].map(([l, i, id]) => `<button class="btn" id="${id}" style="justify-content:flex-start;border-radius:14px">${IC[i]}${l}</button>`).join('')}</div><p style="margin-top:14px;font-size:13px;color:var(--ink2)">${visitProgress().content} conteúdos lidos, ${visitProgress().places} locais e ${visitProgress().interiors} interiores visitados. O progresso fica salvo neste navegador.</p>`);
   const on = (id, f) => { const e = $id(id); if (e) e.onclick = f; };
-  on('m_metro',openMetropolis); on('m_life',openCityLife); on('m_vehicle',openMobility); on('m_themes',openThemes); on('m_reader',()=>openReader()); on('m_access',openAccess); on('m_innov',openInnovation); on('m_resume',resumeVisit);
+  on('m_presenter',openPresenter); on('m_metro',openMetropolis); on('m_life',openCityLife); on('m_vehicle',openMobility); on('m_themes',openThemes); on('m_reader',()=>openReader()); on('m_access',openAccess); on('m_innov',openInnovation); on('m_resume',resumeVisit);
   on('m_go', closeModal); on('m_exit', () => { closeModal(); exitBuilding(); }); on('m_orb', () => { closeModal(); goOrbit(); }); on('m_walk', () => { closeModal(); goWalkFromOrbit(); }); on('m_map', openMap); on('m_glos', () => openGlossary()); on('m_tour', () => { closeModal(); tourStart(); }); on('m_con', openConcept); on('m_help', openHelp); on('m_set', openSettings); on('m_src', openSources);
 }
 function openSettings() {
@@ -8539,7 +8594,9 @@ function nearestPlaceName(x, z) { let b = null, bd = 1e9; places.forEach(p => { 
 function renderStart() {
   $id('start').innerHTML = `<div class="in"><div class="kick">Arquitetura, cidades e futuros negros</div><h1>Metrópole Afrofuturista</h1><p>Uma cidade imaginada a partir de saberes africanos e afro-brasileiros, com tecnologia a serviço da comunidade. Explore por fora, entre nos edifícios e aprenda o que é fato, o que é inspiração e o que é imaginação.</p>
   <div class="btns"><button class="btn primary" id="s_metro">Explorar os oito distritos</button><button class="btn primary" id="s_exp">${IC.eye}Explorar a cidade</button><button class="btn" id="s_tour">${IC.tour}Iniciar visita guiada</button><button class="btn" id="s_con">${IC.info}Conhecer o conceito</button><button class="btn" id="s_map">${IC.map}Ver mapa</button><button class="btn" id="s_themes">${IC.tour}Percursos por tema</button><button class="btn" id="s_vehicle">${IC.play}Transportes limpos</button><button class="btn" id="s_glos">${IC.book}Abrir glossário</button></div>
+  <p class="presenter-start-link"><button class="btn ghost" id="s_presenter">Modo apresentador · acesso por token</button></p>
   <div class="fine">Controles: arraste para girar · clique nos edifícios · botão "Caminhar" para andar com WASD e mouse. Funciona também no celular.</div></div>`;
+  $id('s_presenter').onclick = openPresenter;
   $id('s_metro').onclick=()=>{startExplore();view.r=700;view.ph=.8;openAtlas();}; $id('s_themes').onclick=openThemes; $id('s_vehicle').onclick=openMobility;
   $id('s_exp').onclick = () => startExplore(); $id('s_tour').onclick = () => tourStart(); $id('s_con').onclick = openConcept; $id('s_map').onclick = openMap; $id('s_glos').onclick = () => openGlossary();
 }
@@ -8633,14 +8690,14 @@ function updateAvatar(dt){if(!LIFE.player)return;const visible=G.mode==='fp'&&!G
 /* >>> 65-navigation.js */
 /* Um ponto de entrada para destinos, atividades e preferências. */
 function openNavigator(){
- const entries=[{id:'research',name:'Pesquisas sobre afrofuturismo',detail:'Arquitetura, cultura, ancestralidade e transformação social',run:openResearch},{id:'credits',name:'Créditos e desenvolvimento',detail:'Equipe e fontes',run:openSources},{id:'map',name:'Mapa e destinos',detail:'Buscar lugares, filtrar distritos e traçar rotas',run:openAtlas},{id:'transit',name:'Transportes públicos',detail:'Estações, modalidades e viagens',run:()=>openTransit()},{id:'vehicles',name:'Carro e bicicleta',detail:'Escolher um veículo para dirigir',run:openMobility},{id:'life',name:'Atividades da cidade',detail:'Serviços, eventos, cultivo e exploração',run:openCityLife},{id:'reader',name:'Leitura e busca de conteúdo',detail:'Explorar o acervo sem navegar na cena',run:()=>openReader()},{id:'access',name:'Conforto e acessibilidade',detail:'Texto, contraste, áudio e controles',run:openAccess},{id:'quality',name:'Gráficos e desempenho',detail:'Escolher qualidade para seu aparelho',run:openSettings}];
+ const entries=[{id:'presenter',name:'Modo apresentador',detail:'Acesso por token, roteiro e cronômetro',run:openPresenter},{id:'research',name:'Pesquisas sobre afrofuturismo',detail:'Arquitetura, cultura, ancestralidade e transformação social',run:openResearch},{id:'credits',name:'Créditos e desenvolvimento',detail:'Equipe e fontes',run:openSources},{id:'map',name:'Mapa e destinos',detail:'Buscar lugares, filtrar distritos e traçar rotas',run:openAtlas},{id:'transit',name:'Transportes públicos',detail:'Estações, modalidades e viagens',run:()=>openTransit()},{id:'vehicles',name:'Carro e bicicleta',detail:'Escolher um veículo para dirigir',run:openMobility},{id:'life',name:'Atividades da cidade',detail:'Serviços, eventos, cultivo e exploração',run:openCityLife},{id:'reader',name:'Leitura e busca de conteúdo',detail:'Explorar o acervo sem navegar na cena',run:()=>openReader()},{id:'access',name:'Conforto e acessibilidade',detail:'Texto, contraste, áudio e controles',run:openAccess},{id:'quality',name:'Gráficos e desempenho',detail:'Escolher qualidade para seu aparelho',run:openSettings}];
  openModal(`<h2>Explore a cidade</h2><p>Encontre seu próximo destino ou escolha uma atividade.</p><label for="nav-search">O que você procura?</label><input class="search" id="nav-search" placeholder="Ex.: museu, transporte, gráficos"><div id="nav-actions" class="grid"></div><h3>Lugares encontrados</h3><div id="nav-places" class="list"></div>`);
  const draw=()=>{const q=$id('nav-search').value.toLocaleLowerCase('pt-BR');const actions=entries.filter(x=>matchesSearch(x.name+' '+x.detail,q));$id('nav-actions').innerHTML=actions.map(x=>`<button class="gl" data-nav="${x.id}"><b>${x.name}</b><p>${x.detail}</p></button>`).join('');document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>entries.find(x=>x.id===b.dataset.nav).run());const matches=q?places.filter(p=>INFO[p.key]&&matchesSearch(INFO[p.key].t+' '+INFO[p.key].sub,q)).slice(0,20):[];$id('nav-places').innerHTML=matches.map(p=>`<button data-nav-place="${p.i}">${esc(INFO[p.key].t)}</button>`).join('')||(q?'<p>Nenhum lugar encontrado. Tente outro termo.</p>':'<p>Digite o nome de um lugar ou abra o mapa.</p>');document.querySelectorAll('[data-nav-place]').forEach(b=>b.onclick=()=>selectAtlasPlace(+b.dataset.navPlace));};$id('nav-search').oninput=draw;draw();
 }
 
 /* >>> 66-drawer.js */
 function openDrawer(){
- closeModal();const groups=[{name:'Explore',items:[['map','Mapa e destinos','Encontre seu próximo lugar',openAtlas],['walk','Caminhar pela cidade','Explore ruas, espaços e interiores',()=>METRO.region?walkDistrict():goWalkFromOrbit()],['tour','Passaporte e desafios','Acompanhe suas descobertas',openDiscoveries]]},{name:'Viva a cidade',items:[['play','Transportes','Linhas, estações e embarque',()=>openTransit()],['walk','Dirigir e pedalar','Escolha seu veículo',openMobility],['info','Ateliê da comunidade','Jardins, roteiros e personalização',openCommunityStudio],['info','Cultura e atividades','Encontros, cultivo e serviços',openCityLife],['book','Pesquisas','Arquitetura, história e ancestralidade',openResearch]]},{name:'Sua experiência',items:[['eye','Acessibilidade','Leitura, contraste e controles',openAccess],['sun','Gráficos','Ajuste a qualidade para seu aparelho',openSettings],['moon','Sons','Escolha o ambiente sonoro',openSoundscape],['book','Favoritos e progresso','Seus lugares e cópias de segurança',openProgressTools],['help','Como jogar','Tutorial adaptado aos controles',()=>openTutorial()],['book','Diário de visita','Anotações e lugares recentes',openVisitJournal],['help','Relatar problema','Exportar diagnóstico local',openDiagnostics],['info','Equipe e créditos','Conheça quem faz o projeto',openSources]]}];let index=0;const actions=[];
+ closeModal();const groups=[{name:'Explore',items:[['map','Mapa e destinos','Encontre seu próximo lugar',openAtlas],['walk','Caminhar pela cidade','Explore ruas, espaços e interiores',()=>METRO.region?walkDistrict():goWalkFromOrbit()],['tour','Passaporte e desafios','Acompanhe suas descobertas',openDiscoveries]]},{name:'Viva a cidade',items:[['play','Transportes','Linhas, estações e embarque',()=>openTransit()],['walk','Dirigir e pedalar','Escolha seu veículo',openMobility],['info','Ateliê da comunidade','Jardins, roteiros e personalização',openCommunityStudio],['info','Cultura e atividades','Encontros, cultivo e serviços',openCityLife],['book','Pesquisas','Arquitetura, história e ancestralidade',openResearch]]},{name:'Sua experiência',items:[['tour','Modo apresentador','Roteiro e cronômetro · acesso por token',openPresenter],['eye','Acessibilidade','Leitura, contraste e controles',openAccess],['sun','Gráficos','Ajuste a qualidade para seu aparelho',openSettings],['moon','Sons','Escolha o ambiente sonoro',openSoundscape],['book','Favoritos e progresso','Seus lugares e cópias de segurança',openProgressTools],['help','Como jogar','Tutorial adaptado aos controles',()=>openTutorial()],['book','Diário de visita','Anotações e lugares recentes',openVisitJournal],['help','Relatar problema','Exportar diagnóstico local',openDiagnostics],['info','Equipe e créditos','Conheça quem faz o projeto',openSources]]}];let index=0;const actions=[];
  openModal(`<header class="drawer-hero"><span class="drawer-kicker">ANCESTRALIDADE · FUTURO · COMUNIDADE</span><h2>Uma cidade.<br>Muitos caminhos.</h2><p>Escolha como quer explorar.</p></header><nav class="drawer-navigation" aria-label="Navegação principal">${groups.map(group=>`<section class="drawer-section"><h3>${group.name}</h3>${group.items.map(([icon,title,detail,action])=>{const i=index++;actions[i]=action;return `<button class="drawer-item" data-drawer="${i}"><span class="drawer-item-icon">${IC[icon]||IC.info}</span><span class="drawer-item-copy"><b>${title}</b><small>${detail}</small></span><span class="drawer-arrow" aria-hidden="true">›</span></button>`;}).join('')}</section>`).join('')}</nav><footer class="drawer-footer">Metrópole Afrofuturista <span>Explore no seu ritmo</span></footer>`,()=>{$id('modal').classList.remove('drawer-open');$id('drawer-trigger')?.setAttribute('aria-expanded','false');});$id('modal').classList.add('drawer-open');$id('drawer-trigger')?.setAttribute('aria-expanded','true');document.querySelectorAll('[data-drawer]').forEach(b=>b.onclick=()=>{closeModal();actions[+b.dataset.drawer]();});
 }
 function initDrawer(){const b=document.createElement('button');b.id='drawer-trigger';b.className='btn';b.innerHTML=IC.menu+'<span>Explorar</span>';b.setAttribute('aria-label','Abrir menu principal');b.setAttribute('aria-expanded','false');b.onclick=openDrawer;$id('app').appendChild(b);}
@@ -9114,6 +9171,251 @@ function surfaceNormal(texture,name){
 }
 function applySurfaceDetail(q){const enabled=['high','ultra'].includes(q);Object.entries(MATS).forEach(([name,m])=>{const def=MD[name];if(!def?.t||!m.map)return;const normal=enabled?surfaceNormal(m.map,def.t):null;if(m.normalMap!==normal){m.normalMap=normal;if(normal){m.normalScale.set(.35,.35);m.bumpMap=null;}else if(def.b)m.bumpMap=m.map;m.needsUpdate=true;}});}
 
+/* >>> 75-presenter.js */
+/* Apresentação local para GitHub Pages. O conteúdo do site permanece público.
+   O token libera a interface; não substitui autorização em um servidor. */
+const PRESENTER = {
+  active: false, expiresAt: 0, step: 0, elapsed: 0, runningSince: null,
+  failures: 0, blockedUntil: 0, initialized: false, timer: null,
+  compact: false, notes: false, previousDay: null, previousAutoDay: null,
+};
+const PRESENTER_STEPS = [
+  { title: 'Metrópole Afrofuturista', label: 'Abertura', wide: true,
+    text: 'Um futuro imaginado a partir de saberes africanos e afro-brasileiros. Ancestralidade, comunidade, tecnologia e sustentabilidade orientam esta cidade educativa.',
+    note: 'Apresente a proposta e os quatro pilares. Explique que a cidade é uma criação educativa: não representa todas as culturas africanas como uma única tradição.' },
+  ...TOUR.map(s => ({ title: s.t, label: 'Cidade e arquitetura', place: s.place, enter: s.enter,
+    r: s.r, ph: s.ph, dth: s.dth, text: s.p, note: s.q })),
+  { title: 'Oito distritos, uma cidade conectada', label: 'Escala metropolitana', wide: true,
+    text: 'N’Kanda, Ubuntu, Sankofa, Wakanda Verde, Maat, Kemet, Nzinga e Dandara conectam moradia, cultura, ciência, alimentos e mobilidade. Os distritos são ficcionais.',
+    note: 'Mostre como os bairros se conectam. Compare a proposta com deslocamentos e serviços da sua comunidade.' },
+  { title: 'Pesquisa, referências e pensamento crítico', label: 'Fundamentação', wide: true, action: 'research',
+    text: 'A pesquisa reúne arquitetura, urbanismo, arte, ancestralidade e cultura negra. Diferencie fatos históricos, referências culturais, interpretações e propostas imaginadas.',
+    note: 'Abra as pesquisas para consultar o texto completo. Ao citar uma informação histórica, confira a fonte original.' },
+  { title: 'Quem constrói este futuro?', label: 'Encerramento', wide: true, action: 'credits',
+    text: 'Uma cidade se constrói com pessoas. Conheça a equipe de pesquisa, design, apresentação e desenvolvimento que participa deste projeto.',
+    note: 'Apresente os créditos e convide o público a propor uma ação concreta de cuidado, cultura ou sustentabilidade para sua comunidade.' },
+];
+
+function presenterHasAccess(now = Date.now()) {
+  return PRESENTER.expiresAt > now;
+}
+function presenterClock(now = Date.now()) {
+  return PRESENTER.elapsed + (PRESENTER.runningSince === null ? 0 : Math.max(0, now - PRESENTER.runningSince));
+}
+function presenterFormatTime(ms) {
+  const seconds = Math.max(0, Math.floor(ms / 1000));
+  return [Math.floor(seconds / 3600), Math.floor(seconds / 60) % 60, seconds % 60]
+    .map(n => String(n).padStart(2, '0')).join(':');
+}
+async function presenterCheckToken(value) {
+  if (!globalThis.crypto?.subtle) throw Error('Abra o site por HTTPS para validar o token neste navegador.');
+  const token = String(value).trim();
+  if (!/^AFRO-[A-Za-z0-9_-]{24,64}$/.test(token)) return false;
+  const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(token));
+  const digest = Array.from(new Uint8Array(bytes), x => x.toString(16).padStart(2, '0')).join('');
+  let different = digest.length ^ PRESENTER_ACCESS.tokenHash.length;
+  for (let i = 0; i < digest.length; i++) different |= digest.charCodeAt(i) ^ (PRESENTER_ACCESS.tokenHash.charCodeAt(i) || 0);
+  return different === 0;
+}
+function openPresenter() {
+  if (PRESENTER.active && presenterHasAccess()) {
+    closeModal();
+    $id('presenter-title')?.focus();
+    return;
+  }
+  if (presenterHasAccess()) return presenterStart(0);
+  openModal(`<section class="presenter-access"><div class="presenter-eyebrow">ANCESTRALIDADE · CONHECIMENTO · FUTURO</div>
+    <h2>Modo apresentador</h2><p>Conduza uma visita à metrópole, dos quatro pilares aos interiores, às pesquisas e à equipe.</p>
+    <div class="presenter-access-features"><span>${PRESENTER_STEPS.length} etapas</span><span>Cronômetro</span><span>Teclado e toque</span></div>
+    <form id="presenter-login"><label for="presenter-token">Token de acesso</label>
+    <div class="presenter-token-row"><input class="search" id="presenter-token" type="password" required maxlength="80" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="presenter-access-help presenter-login-status"><button type="button" class="btn" id="presenter-show-token" aria-label="Mostrar token" aria-pressed="false">Mostrar</button></div>
+    <p id="presenter-login-status" role="status" aria-live="polite"></p>
+    <button class="btn primary" type="submit" id="presenter-submit">Entrar e apresentar</button></form>
+    <p id="presenter-access-help" class="presenter-access-help">O token libera os controles neste navegador por até 2 horas, sem ser salvo. Ao sair ou recarregar, entre novamente. O conteúdo do site é público; este bloqueio local não protege informações privadas.</p></section>`);
+  const form = $id('presenter-login'), input = $id('presenter-token'), status = $id('presenter-login-status'), submit = $id('presenter-submit');
+  $id('presenter-show-token').onclick = e => {
+    const visible = input.type === 'password'; input.type = visible ? 'text' : 'password';
+    e.currentTarget.textContent = visible ? 'Ocultar' : 'Mostrar';
+    e.currentTarget.setAttribute('aria-label', visible ? 'Ocultar token' : 'Mostrar token');
+    e.currentTarget.setAttribute('aria-pressed', String(visible));
+  };
+  const blocked = Math.ceil((PRESENTER.blockedUntil - Date.now()) / 1000);
+  if (blocked > 0) status.textContent = `Muitas tentativas. Aguarde ${blocked} segundos antes de tentar novamente.`;
+  form.onsubmit = async e => {
+    e.preventDefault();
+    if (submit.disabled) return;
+    const remaining = Math.ceil((PRESENTER.blockedUntil - Date.now()) / 1000);
+    if (remaining > 0) { status.textContent = `Aguarde ${remaining} segundos antes de tentar novamente.`; return; }
+    submit.disabled = true; input.setAttribute('aria-invalid', 'false'); status.textContent = 'Verificando acesso…';
+    let token = input.value; input.value = '';
+    try {
+      const valid = await presenterCheckToken(token); token = '';
+      if (!modalOpen || $id('presenter-login') !== form) return;
+      if (!valid) {
+        PRESENTER.failures++;
+        if (PRESENTER.failures >= 5) { PRESENTER.blockedUntil = Date.now() + 30000; PRESENTER.failures = 0; }
+        input.setAttribute('aria-invalid', 'true');
+        status.textContent = PRESENTER.blockedUntil > Date.now() ? 'Muitas tentativas. Aguarde 30 segundos antes de tentar novamente.' : 'Token inválido. Confira o token fornecido pela equipe.';
+        input.focus(); return;
+      }
+      PRESENTER.failures = 0; PRESENTER.blockedUntil = 0;
+      PRESENTER.expiresAt = Date.now() + PRESENTER_ACCESS.sessionMs;
+      presenterStart(0);
+    } catch (error) { if ($id('presenter-login') === form) status.textContent = error.message; }
+    finally { token = ''; submit.disabled = false; }
+  };
+  input.focus();
+}
+function presenterRequireAccess() {
+  if (presenterHasAccess()) return true;
+  if (PRESENTER.active) presenterStop('Sessão encerrada. Informe o token para apresentar novamente.');
+  else openPresenter();
+  return false;
+}
+function presenterStart(index = 0) {
+  if (!presenterRequireAccess() || G.busy) return;
+  if (!PRESENTER.active) {
+    PRESENTER.previousDay = G.tGoal;
+    PRESENTER.previousAutoDay = METRO.autoDay;
+    PRESENTER.elapsed = 0; PRESENTER.runningSince = Date.now(); PRESENTER.compact = false; PRESENTER.notes = false;
+  }
+  PRESENTER.active = true;
+  document.documentElement.dataset.presenting = 'true';
+  $id('presenter-stage').classList.remove('hidden');
+  presenterGo(index);
+}
+function presenterGo(index) {
+  if (!presenterRequireAccess() || !PRESENTER.active || G.busy) return;
+  if (!Number.isInteger(index) || index < 0 || index >= PRESENTER_STEPS.length) return;
+  const s = PRESENTER_STEPS[index]; PRESENTER.step = index;
+  closeModal();
+  if (G.booted) {
+    startExplore();
+    if (s.wide) Object.assign(view, { x: 0, y: 0, z: 0, r: 920, ph: .8 });
+    else flyTo(s.place, { r: s.r, ph: s.ph, dth: s.dth });
+  }
+  renderPresenter();
+}
+function renderPresenter() {
+  if (!PRESENTER.active || !presenterHasAccess()) return;
+  const s = PRESENTER_STEPS[PRESENTER.step], canEnter = G.booted && s.enter && places.some(p => p.int === s.enter);
+  $id('presenter-stage').innerHTML = `<header class="presenter-topbar"><span class="presenter-badge">MODO APRESENTADOR</span><div class="presenter-clock"><time id="presenter-clock" aria-label="Tempo de apresentação">${presenterFormatTime(presenterClock())}</time><button class="btn sm" id="presenter-pause" aria-pressed="${PRESENTER.runningSince === null}">${PRESENTER.runningSince === null ? 'Retomar' : 'Pausar'}</button></div><button class="btn sm" id="presenter-lock">Sair e bloquear</button></header>
+    <section class="presenter-deck${PRESENTER.compact ? ' is-compact' : ''}" aria-label="Controles de apresentação">
+    <div class="presenter-deck-meta"><span>${esc(s.label)} · ${PRESENTER.step + 1}/${PRESENTER_STEPS.length}</span><button class="btn sm" id="presenter-compact" aria-expanded="${!PRESENTER.compact}" aria-controls="presenter-content">${PRESENTER.compact ? 'Mostrar texto' : 'Recolher texto'}</button></div>
+    <h2 id="presenter-title" tabindex="-1">${esc(s.title)}</h2>
+    <div id="presenter-content" ${PRESENTER.compact ? 'hidden' : ''}><p class="presenter-description">${esc(s.text)}</p><div class="presenter-actions">
+    ${canEnter ? `<button class="btn sm" id="presenter-interior">${G.in ? 'Voltar ao exterior' : 'Visitar interior'}</button>` : ''}
+    ${s.action ? `<button class="btn sm" id="presenter-resource">${s.action === 'research' ? 'Abrir pesquisas' : 'Ver equipe e créditos'}</button>` : ''}
+    <button class="btn sm" id="presenter-notes" aria-expanded="${PRESENTER.notes}" aria-controls="presenter-note">Roteiro de fala</button>
+    <button class="btn sm" id="presenter-full">Tela cheia</button>${G.booted ? '<button class="btn sm" id="presenter-light">Alternar dia/noite</button>' : ''}</div>
+    <p id="presenter-note" class="presenter-note" ${PRESENTER.notes ? '' : 'hidden'}>${esc(s.note)}</p></div>
+    <nav class="presenter-navigation" aria-label="Etapas da apresentação"><button class="btn" id="presenter-prev" ${PRESENTER.step === 0 ? 'disabled' : ''} aria-label="Etapa anterior">← <span>Anterior</span></button><div class="presenter-step-picker"><label class="sr-only" for="presenter-step">Ir para etapa</label><select id="presenter-step">${PRESENTER_STEPS.map((step, i) => `<option value="${i}" ${i === PRESENTER.step ? 'selected' : ''}>${i + 1}. ${esc(step.title)}</option>`).join('')}</select></div><button class="btn primary" id="presenter-next">${PRESENTER.step === PRESENTER_STEPS.length - 1 ? 'Concluir' : 'Próxima →'}</button></nav>
+    <div class="presenter-progress" role="progressbar" aria-label="Progresso do roteiro" aria-valuemin="1" aria-valuemax="${PRESENTER_STEPS.length}" aria-valuenow="${PRESENTER.step + 1}"><span style="width:${(PRESENTER.step + 1) / PRESENTER_STEPS.length * 100}%"></span></div>
+    <small class="presenter-shortcuts">← → etapas · P pausar · F tela cheia · Esc opções${G.booted ? '' : ' · Apresentação em texto: 3D indisponível'}</small></section>
+    <div class="sr-only" id="presenter-announcement" role="status" aria-live="polite">Etapa ${PRESENTER.step + 1}: ${esc(s.title)}</div>`;
+  $id('presenter-prev').onclick = () => presenterGo(PRESENTER.step - 1);
+  $id('presenter-next').onclick = presenterNext;
+  $id('presenter-step').onchange = e => presenterGo(Number(e.target.value));
+  $id('presenter-lock').onclick = () => presenterStop();
+  $id('presenter-pause').onclick = () => presenterPause();
+  $id('presenter-compact').onclick = () => { PRESENTER.compact = !PRESENTER.compact; renderPresenter(); $id('presenter-compact').focus(); };
+  $id('presenter-notes').onclick = () => { PRESENTER.notes = !PRESENTER.notes; $id('presenter-note').hidden = !PRESENTER.notes; $id('presenter-notes').setAttribute('aria-expanded', String(PRESENTER.notes)); };
+  $id('presenter-full').onclick = presenterFullscreen;
+  if ($id('presenter-light')) $id('presenter-light').onclick = () => { if (presenterRequireAccess()) toggleDay(); };
+  if ($id('presenter-interior')) $id('presenter-interior').onclick = presenterInterior;
+  if ($id('presenter-resource')) $id('presenter-resource').onclick = () => { if (presenterRequireAccess()) s.action === 'research' ? openResearch() : openSources(); };
+  $id('presenter-title').focus({ preventScroll: true });
+}
+function presenterNext() {
+  if (!presenterRequireAccess() || G.busy) return;
+  if (PRESENTER.step < PRESENTER_STEPS.length - 1) return presenterGo(PRESENTER.step + 1);
+  presenterPause(true);
+  openModal(`<h2>Apresentação concluída</h2><p>Você percorreu ${PRESENTER_STEPS.length} etapas em ${presenterFormatTime(presenterClock())}.</p><p>Qual futuro sua comunidade quer construir?</p><div class="row presenter-actions"><button class="btn primary" id="presenter-finish">Sair e bloquear</button><button class="btn" id="presenter-restart">Recomeçar roteiro</button></div>`);
+  $id('presenter-finish').onclick = () => presenterStop();
+  $id('presenter-restart').onclick = () => { if (!presenterRequireAccess()) return; PRESENTER.elapsed = 0; PRESENTER.runningSince = Date.now(); presenterGo(0); };
+}
+function presenterPause(forcePause = false) {
+  if (!presenterRequireAccess() || !PRESENTER.active) return;
+  const now = Date.now();
+  if (PRESENTER.runningSince !== null) { PRESENTER.elapsed = presenterClock(now); PRESENTER.runningSince = null; }
+  else if (!forcePause) PRESENTER.runningSince = now;
+  const b = $id('presenter-pause');
+  if (b) { b.textContent = PRESENTER.runningSince === null ? 'Retomar' : 'Pausar'; b.setAttribute('aria-pressed', String(PRESENTER.runningSince === null)); }
+  presenterTick();
+}
+async function presenterInterior() {
+  if (!presenterRequireAccess() || !PRESENTER.active || !G.booted || G.busy) return;
+  const index = PRESENTER.step, s = PRESENTER_STEPS[index];
+  if (!s.enter) return;
+  if (G.in) { leaveInterior(); setMode('orbit'); flyTo(s.place, { r: s.r, ph: s.ph, dth: s.dth }); }
+  else {
+    const p = places.find(p => p.int === s.enter); if (!p) return;
+    const d = p.doors[0] || { x: p.cx, z: p.cz, ry: 0 };
+    await enterBuilding(s.enter, { x: d.x, z: d.z, ry: d.ry, key: p.key });
+    // A sessão pode terminar durante a transição assíncrona do interior.
+    if (!PRESENTER.active || !presenterHasAccess()) { leaveInterior(); setMode('orbit'); return; }
+  }
+  if (G.in) PRESENTER.compact = true;
+  renderPresenter();
+}
+async function presenterFullscreen() {
+  if (!presenterRequireAccess()) return;
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else if ($id('app').requestFullscreen) await $id('app').requestFullscreen();
+    else toast('Tela cheia indisponível neste navegador. Use a rotação do aparelho para ampliar a cena.');
+  } catch (e) { toast('Não foi possível ativar a tela cheia neste navegador.'); }
+}
+function presenterOptions() {
+  if (!presenterRequireAccess()) return;
+  openModal(`<h2>Apresentação em andamento</h2><p>O cronômetro pode ser pausado sem encerrar o roteiro.</p><div class="presenter-actions"><button class="btn primary" id="presenter-continue">Continuar</button><button class="btn" id="presenter-options-pause">${PRESENTER.runningSince === null ? 'Retomar' : 'Pausar'} cronômetro</button><button class="btn" id="presenter-options-lock">Sair e bloquear</button></div>`);
+  $id('presenter-continue').onclick = closeModal;
+  $id('presenter-options-pause').onclick = () => { presenterPause(); closeModal(); };
+  $id('presenter-options-lock').onclick = () => presenterStop();
+}
+function presenterStop(message = 'Modo apresentador encerrado e bloqueado.') {
+  PRESENTER.active = false; PRESENTER.expiresAt = 0; PRESENTER.runningSince = null;
+  delete document.documentElement.dataset.presenting;
+  $id('presenter-stage')?.classList.add('hidden');
+  closeModal();
+  if (G.booted) {
+    // Não altere G.busy: uma transição pendente fará sua própria limpeza.
+    if (!G.busy) startExplore();
+    G.tGoal = PRESENTER.previousDay ?? G.tGoal;
+    METRO.autoDay = PRESENTER.previousAutoDay ?? METRO.autoDay;
+  }
+  if (G.booted) $id('c')?.focus();
+  else $id('presenter-fallback')?.focus();
+  toast(message);
+}
+function presenterTick() {
+  if (!PRESENTER.active) return;
+  if (!presenterHasAccess()) { presenterStop('Sessão expirada. Entre com o token para apresentar novamente.'); return; }
+  const el = $id('presenter-clock'); if (el) el.textContent = presenterFormatTime(presenterClock());
+}
+function presenterKeydown(e) {
+  if (!PRESENTER.active || modalOpen || e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.target?.closest?.('input,textarea,select,[contenteditable="true"]')) return;
+  const action = { ArrowLeft: () => presenterGo(PRESENTER.step - 1), PageUp: () => presenterGo(PRESENTER.step - 1),
+    ArrowRight: presenterNext, PageDown: presenterNext, KeyP: presenterPause, KeyF: presenterFullscreen, Escape: presenterOptions }[e.code];
+  if (!action) return;
+  e.preventDefault(); e.stopImmediatePropagation();
+  if (!e.repeat) action();
+}
+function presenterReady() {
+  if (location.hash === '#apresentador') openPresenter();
+}
+function initPresenter() {
+  if (PRESENTER.initialized) return;
+  PRESENTER.initialized = true;
+  const stage = document.createElement('div'); stage.id = 'presenter-stage'; stage.className = 'hidden'; $id('app').appendChild(stage);
+  const fallback = document.createElement('button'); fallback.id = 'presenter-fallback'; fallback.className = 'btn'; fallback.textContent = 'Modo apresentador em texto'; fallback.onclick = openPresenter; $id('err').firstElementChild.appendChild(fallback);
+  addEventListener('keydown', presenterKeydown, true);
+  document.addEventListener('visibilitychange', presenterTick);
+  addEventListener('pagehide', () => { PRESENTER.expiresAt = 0; PRESENTER.active = false; PRESENTER.runningSince = null; delete document.documentElement.dataset.presenting; stage.classList.add('hidden'); });
+  PRESENTER.timer = setInterval(presenterTick, 500);
+}
+
 /* >>> 80-main.js */
 /* ============================================================
    PRINCIPAL — inicialização, laço de render, janela
@@ -9122,8 +9424,9 @@ let ren, scene, cam, clock, VW = 1000, VH = 600;
 const view = { x: 0, y: 0, z: 0, r: 230, th: .6, ph: .95 }; // câmera orbital (visão urbana)
 function buildBuildings() { buildCivic(); buildPlaces(); buildExtras(); }
 function setProg(p, txt) { $id('lbar').style.width = Math.round(p * 100) + '%'; if (txt) $id('ltxt').textContent = txt; return nextFrame(); }
-function showError(msg) { $id('load').classList.add('hidden'); $id('etxt').textContent = msg; $id('err').classList.remove('hidden'); }
+function showError(msg) { $id('load').classList.add('hidden'); $id('etxt').textContent = msg; $id('err').classList.remove('hidden'); presenterReady(); }
 async function boot() {
+  initPresenter();
   try { G.touch = (window.matchMedia && matchMedia('(pointer:coarse)').matches) || 'ontouchstart' in window; } catch (e) { }
   await setProg(.04, 'Iniciando o motor 3D…');
   try { ren = new T.WebGLRenderer({ canvas: $id('c'), antialias: true, powerPreference: 'high-performance' }); }
@@ -9143,7 +9446,7 @@ async function boot() {
   try { const q = localStorage.getItem('vila.q'); G.quality = q || 'auto'; const s = parseFloat(localStorage.getItem('vila.sens')); if (s) G.sens = s; } catch (e) { G.quality = 'auto'; }
   loadVisited(); buildLabels(); initInput(); initTransport(); initWorldUI(); initDrawer(); renderStart(); onResize(); addEventListener('resize', onResize); document.addEventListener('fullscreenchange', onResize);
   document.addEventListener('visibilitychange', () => { clock.getDelta(); G.keys = {}; G.joy.x = G.joy.y = 0; G.joy.run = false; ren.shadowMap.needsUpdate = true; });
-  resetView();view.r=920;view.ph=.8; setMode('start'); hideLoad(); G.booted = true; initExperience();
+  resetView();view.r=920;view.ph=.8; setMode('start'); hideLoad(); G.booted = true; initExperience(); presenterReady();
   window.__V = { METRO, DISTRICTS, LIFE, NETWORK, LINES, openAtlas, openTransit, boardTransit, openCityLife, openFarm, openEvents, openClimate, openSpaceport, startSpaceflight, ROADS, TRANSIT, FLEET, NAV, findRoute, startRoute, startVehicle, exitVehicle, updateTransport, openReader, openAccess, openThemes, openInnovation, resolvePlace, orbitMotion, frame, auto: v => { AUTO = v; }, view, cam, scene, iScene, ren, places, EXT, G, applyTime: t => applyTime(scene, ren, t), enterBuilding, exitBuilding, getInterior, INT, HOT, INFO, openPanel, tourShow, TOUR, setQuality };
   requestAnimationFrame(loop);
 }

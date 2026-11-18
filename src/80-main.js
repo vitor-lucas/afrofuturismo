@@ -5,8 +5,9 @@ let ren, scene, cam, clock, VW = 1000, VH = 600;
 const view = { x: 0, y: 0, z: 0, r: 230, th: .6, ph: .95 }; // câmera orbital (visão urbana)
 function buildBuildings() { buildCivic(); buildPlaces(); buildExtras(); }
 function setProg(p, txt) { $id('lbar').style.width = Math.round(p * 100) + '%'; if (txt) $id('ltxt').textContent = txt; return nextFrame(); }
-function showError(msg) { $id('load').classList.add('hidden'); $id('etxt').textContent = msg; $id('err').classList.remove('hidden'); }
+function showError(msg) { $id('load').classList.add('hidden'); $id('etxt').textContent = msg; $id('err').classList.remove('hidden'); presenterReady(); }
 async function boot() {
+  initPresenter();
   try { G.touch = (window.matchMedia && matchMedia('(pointer:coarse)').matches) || 'ontouchstart' in window; } catch (e) { }
   await setProg(.04, 'Iniciando o motor 3D…');
   try { ren = new T.WebGLRenderer({ canvas: $id('c'), antialias: true, powerPreference: 'high-performance' }); }
@@ -26,7 +27,7 @@ async function boot() {
   try { const q = localStorage.getItem('vila.q'); G.quality = q || 'auto'; const s = parseFloat(localStorage.getItem('vila.sens')); if (s) G.sens = s; } catch (e) { G.quality = 'auto'; }
   loadVisited(); buildLabels(); initInput(); initTransport(); initWorldUI(); initDrawer(); renderStart(); onResize(); addEventListener('resize', onResize); document.addEventListener('fullscreenchange', onResize);
   document.addEventListener('visibilitychange', () => { clock.getDelta(); G.keys = {}; G.joy.x = G.joy.y = 0; G.joy.run = false; ren.shadowMap.needsUpdate = true; });
-  resetView();view.r=920;view.ph=.8; setMode('start'); hideLoad(); G.booted = true; initExperience();
+  resetView();view.r=920;view.ph=.8; setMode('start'); hideLoad(); G.booted = true; initExperience(); presenterReady();
   window.__V = { METRO, DISTRICTS, LIFE, NETWORK, LINES, openAtlas, openTransit, boardTransit, openCityLife, openFarm, openEvents, openClimate, openSpaceport, startSpaceflight, ROADS, TRANSIT, FLEET, NAV, findRoute, startRoute, startVehicle, exitVehicle, updateTransport, openReader, openAccess, openThemes, openInnovation, resolvePlace, orbitMotion, frame, auto: v => { AUTO = v; }, view, cam, scene, iScene, ren, places, EXT, G, applyTime: t => applyTime(scene, ren, t), enterBuilding, exitBuilding, getInterior, INT, HOT, INFO, openPanel, tourShow, TOUR, setQuality };
   requestAnimationFrame(loop);
 }

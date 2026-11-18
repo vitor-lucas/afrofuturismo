@@ -5,3 +5,5 @@ let scripts=0;for(const match of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/scri
 for(const file of ['downloads/index.html','downloads/vila-afrofuturista.html','downloads/vila-afrofuturista-fontes.zip','downloads/status-100-sugestoes.md'])assert.ok(fs.statSync(path.join(dist,file)).size>0,file+' ausente');
 const downloads=fs.readFileSync(path.join(dist,'downloads/index.html'),'utf8');assert.ok(downloads.includes('href="../"'),'Voltar ao site deve respeitar a subpasta do GitHub Pages');assert.ok(!downloads.includes('href="/"'));
 assert.equal(fs.readFileSync(path.join(dist,'downloads/vila-afrofuturista.html'),'utf8'),html);console.log(`Pages: entrada, ${scripts} scripts, modelos, imagens, downloads e caminhos relativos conferidos.`);
+assert.ok(html.includes('const PRESENTER_ACCESS = Object.freeze('), 'Configuração do apresentador ausente');
+assert.ok(html.includes('function initPresenter()') && html.includes('id="s_presenter"'), 'Modo apresentador não integrado');

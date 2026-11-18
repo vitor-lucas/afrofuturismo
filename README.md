@@ -4,6 +4,30 @@
 
 O GitHub Pages publica a branch `main`, pasta `/ (root)`. A página de entrada é `index.html`, e os downloads estão em https://vitor-lucas.github.io/afrofuturismo/downloads/.
 
+## Modo apresentador
+
+Abra **Modo apresentador · acesso por token** na tela inicial, no menu de exploração ou no menu gaveta do celular. Link direto: https://vitor-lucas.github.io/afrofuturismo/#apresentador. O token deve ser fornecido pela equipe; não é um token do GitHub.
+
+O roteiro tem 15 etapas: abertura, 11 lugares da visita guiada, distritos, pesquisas e créditos. Os controles incluem seleção de etapa, anterior/próxima, cronômetro com pausa, roteiro de fala, tela cheia e dia/noite. Nos lugares compatíveis, **Visitar interior** permite entrar e voltar à fachada. Sem WebGL, a apresentação permanece disponível em texto na tela de erro do 3D.
+
+- **← / →** ou **Page Up / Page Down**: mudar etapa.
+- **P**: pausar/retomar cronômetro. **F**: tela cheia, quando suportada pelo navegador.
+- **Esc**: opções da apresentação. Em celulares, use os botões na tela; **Recolher texto** libera espaço para a cena.
+- **Sair e bloquear** encerra o acesso. A sessão expira após duas horas; recarregar ou sair da página exige o token novamente.
+
+O GitHub Pages serve arquivos públicos e não executa um servidor de autenticação. Por isso, o token é um **bloqueio local dos controles**, adequado para conduzir uma apresentação pública; não protege dados privados nem impede alterações pelo console do navegador. O projeto guarda apenas o hash SHA-256 do token. O valor digitado não é enviado, colocado na URL ou salvo no armazenamento do navegador. O roteiro de fala contém orientações públicas, não notas confidenciais.
+
+Para trocar o token:
+
+```sh
+npm run presenter:token
+npm run pages
+```
+
+Guarde o novo token mostrado no terminal, compartilhe apenas com os apresentadores e envie os arquivos gerados para `main`. A próxima versão publicada aceita apenas o novo token; páginas já abertas devem ser recarregadas para receber a troca. Não coloque o token em commits, no README ou no link do site. O hash e a duração da sessão estão em `src/09-presenter-config.js`.
+
+Para verificar a lógica e os controles sem renderização GPU: instale as dependências de desenvolvimento e execute `npm run test:presenter`. Esses testes de DOM não substituem a conferência visual em dispositivos reais.
+
 ## Atualizar o site
 
 1. Edite os arquivos de `src/`.
